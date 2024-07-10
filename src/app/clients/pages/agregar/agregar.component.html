@@ -1,0 +1,93 @@
+<h1>Nuevo Cliente <small>--</small></h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+     <form [formGroup]="miFormulario" autocomplete="off" (ngSubmit)="guardar()">
+        <div fxFlex="90" fxLayout="column">
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                <mat-form-field [ngStyle]="{'width': '250'}">
+                    <mat-label>DNI</mat-label>
+                        <input matInput
+                            type="text"
+                            formControlName="dni"
+                            required>
+                            <mat-error>El dni debe tener 7 digitos</mat-error>
+                </mat-form-field>
+
+                <mat-form-field [ngStyle]="{'width': '500'}">
+                    <mat-label>Nombres</mat-label>
+                    <input matInput
+                            type="text"
+                            formControlName="nombre"
+                            required>
+                            <mat-error>Debe ser de 3 letras</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                <mat-form-field fxFlex="100">
+                    <mat-label>Apellidos</mat-label>
+                        <input matInput
+                            type="text"
+                            formControlName="apellido"
+                            required>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="100" fxLayout.xs="column">
+                    <mat-label>Celular</mat-label>
+                    <input matInput
+                            type="text"
+                            formControlName="celular"
+                            required>
+                </mat-form-field>
+            </div>
+
+
+            <mat-form-field>
+                <mat-label>Correo</mat-label>
+                <input matInput
+                        type="text"
+                        formControlName="email"
+                        required>
+                        <mat-error>Debe ser un correo valido</mat-error>
+            </mat-form-field>
+
+            <!-- <hr> -->
+
+
+            <div class="spacer">
+                <button mat-raised-button color="primary"
+                    (click)="guardar()">
+                    <mat-icon>save</mat-icon>
+                    Guardar
+                </button>
+
+                <button *ngIf="cliente.id"
+                    mat-raised-button
+                    color="warn"
+                    (click)="remove()">
+                    <mat-icon>remove</mat-icon>
+                    Borrar
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+    <!-- <div fxFlex="50">
+        <img [src]="heroe | imagen" alt="">
+    </div> -->
+
+
+
+
+
+
+</div>

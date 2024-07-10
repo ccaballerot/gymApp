@@ -1,0 +1,39 @@
+<h1>Servicios</h1>
+<mat-divider></mat-divider>
+<br>
+<button mat-raised-button color="primary" style="margin-left:20px"
+        (click)="addServicio()">Nuevo</button>
+<mat-card>
+  <mat-card-header>
+    <mat-form-field>
+      <input matInput (keyup)="filterchange($event)" placeholder="Buscar...">
+    </mat-form-field>
+  </mat-card-header>
+  <!-- <img matCardImage src="Card wide image source"> -->
+  <mat-card-content>
+    <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container [matColumnDef]="servicio.value" *ngFor="let servicio of listServicio">
+        <th mat-sort-header mat-header-cell *matHeaderCellDef> {{ servicio.valueView }} </th>
+        <td mat-cell *matCellDef="let element"> {{ element[servicio.value] }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="primary">Editar</button>
+          <button mat-raised-button color="warn">Borrar</button>
+        </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+  </mat-card-footer>
+
+</mat-card>

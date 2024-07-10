@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Heroe } from '../../interfaces/heroes.interface';
 
@@ -7,7 +7,7 @@ import { Heroe } from '../../interfaces/heroes.interface';
   templateUrl: './confirmar.component.html',
   styles: []
 })
-export class ConfirmarComponent {
+export class ConfirmarComponent implements OnInit {
 
   constructor( private _matDialogRef: MatDialogRef<ConfirmarComponent>,
                @Inject(MAT_DIALOG_DATA) public data: Heroe ){}

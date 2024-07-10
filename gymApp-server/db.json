@@ -1,0 +1,241 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "auth": "Kmnspaslklkslkasdlasd"
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "dni": 45502747,
+      "nombre": "Charlie Joel",
+      "apellido": "Caballero Tocas",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "activo"
+    },
+    {
+      "id": 2,
+      "dni": 45502747,
+      "nombre": "Helium",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "activo"
+    },
+    {
+      "id": 3,
+      "dni": 45502747,
+      "nombre": "Lithium",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "activo"
+    },
+    {
+      "id": 4,
+      "dni": 45502747,
+      "nombre": "Beryllium",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "inactivo"
+    },
+    {
+      "id": 6,
+      "dni": 45502747,
+      "nombre": "Carbon",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "inactivo"
+    },
+    {
+      "id": 7,
+      "dni": 45502747,
+      "nombre": "Nitrogen",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "inactivo"
+    },
+    {
+      "id": 8,
+      "dni": 45502747,
+      "nombre": "Oxygen",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "inactivo"
+    },
+    {
+      "id": 9,
+      "dni": 45502747,
+      "nombre": "Fluorine",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "activo"
+    },
+    {
+      "id": 10,
+      "dni": 45502747,
+      "nombre": "Neon",
+      "apellido": "Caballero",
+      "celular": 912030700,
+      "email": "fearfactoryxyz@gmail.com",
+      "estado": "activo"
+    }
+  ],
+  "planes": [
+    {
+      "id": "1",
+      "nombre": "Plan x 1 mes",
+      "precio": "69.90",
+      "estado": "activo"
+    },
+    {
+      "id": "2",
+      "nombre": "Plan x 2 meses",
+      "precio": "120.90",
+      "estado": "activo"
+    },
+    {
+      "id": "3",
+      "nombre": "Plan x 3 meses",
+      "precio": "149.90",
+      "estado": "activo"
+    }
+  ],
+  "servicios": [
+    {
+      "id": "1",
+      "plan": "Plan x 1 mes",
+      "cliente": "Charlie Joel Caballero",
+      "periodo": "2024-01-01 - 2024-01-31",
+      "diasRest": "15",
+      "estado": "Activo"
+    },
+    {
+      "id": "2",
+      "plan": "Plan x 2 meses",
+      "cliente": "Charlie Joel Caballero",
+      "periodo": "2024-01-01 - 2024-02-29",
+      "diasRest": "26",
+      "estado": "Inactivo"
+    },
+    {
+      "id": "3",
+      "plan": "Plan x 2 meses",
+      "cliente": "Charlie Joel Caballero",
+      "periodo": "2024-01-01 - 2024-02-29",
+      "diasRest": "26",
+      "estado": "Inactivo"
+    },
+    {
+      "id": "4",
+      "plan": "Plan x 3 meses",
+      "cliente": "Charlie Joel Caballero",
+      "periodo": "2024-01-01 - 2024-03-30",
+      "diasRest": "18",
+      "estado": "Activo"
+    },
+    {
+      "id": "5",
+      "plan": "Plan x 3 meses",
+      "cliente": "Charlie Joel Caballero",
+      "periodo": "2024-02-01 - 2024-04-30",
+      "diasRest": "25",
+      "estado": "Activo"
+    },
+    {
+      "id": "6",
+      "plan": "Plan x 1 mes",
+      "cliente": "Charlie Joel Caballero",
+      "periodo": "2024-01-01 - 2024-01-31",
+      "diasRest": "12",
+      "estado": "Inactivo"
+    }
+  ],
+  "clientesServicio": [
+    {
+      "id": "1",
+      "nombres": "Charlie Caballero Tocas"
+    },
+    {
+      "id": "2",
+      "nombres": "Charlie Caballero Tocas"
+    },
+    {
+      "id": "3",
+      "nombres": "Charlie Caballero Tocas"
+    },
+    {
+      "id": "4",
+      "nombres": "Charlie Caballero Tocas"
+    },
+    {
+      "id": "5",
+      "nombres": "Charlie Caballero Tocas"
+    }
+  ],
+  "ventas": [
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Boleta",
+      "total": "78.00",
+      "estado": "activo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Boleta",
+      "total": "39.00",
+      "estado": "activo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Factura",
+      "total": "59.00",
+      "estado": "activo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Boleta",
+      "total": "39.00",
+      "estado": "activo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Boleta",
+      "total": "78.00",
+      "estado": "inactivo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Boleta",
+      "total": "39.00",
+      "estado": "inactivo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Factura",
+      "total": "29.00",
+      "estado": "inactivo"
+    },
+    {
+      "fecha": "2024-04-22",
+      "cliente": "Charlie Joel Caballero",
+      "comprobante": "Factura",
+      "total": "89.00",
+      "estado": "activo"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+<h1>Nuevo Plan <small>--</small></h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+     <form [formGroup]="miFormulario" autocomplete="off" (ngSubmit)="save()">
+        <div fxFlex="90" fxLayout="column">
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                <mat-form-field fxFlex="100">
+                  <mat-label>Plan</mat-label>
+                    <mat-select
+                      formControlName="plan"
+                      [(ngModel)]="selectedValuePlan"
+                      required
+                      name="plan">
+
+                      <mat-option
+                        *ngFor="let plan of planes"
+                        [value]="plan.value">
+                          {{plan.viewValue}}
+                      </mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="100">
+                  <mat-label>Clientes</mat-label>
+                    <mat-select
+                      formControlName="clientes"
+                      [(ngModel)]="selectedValueCli"
+                      required
+                      name="clientes">
+
+                      <mat-option
+                        *ngFor="let cliente of clientes"
+                        [value]="cliente.id">
+                          {{cliente.nombres}}
+                      </mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="100">
+                  <mat-label>Estado</mat-label>
+                    <mat-select
+                      formControlName="estado"
+                      [(ngModel)]="selectedValueEst"
+                      required
+                      name="estado">
+
+                      <mat-option
+                        *ngFor="let estado of estados"
+                        [value]="estado.value">
+                          {{estado.viewValue}}
+                      </mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+
+
+            </div>
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+
+                <mat-form-field>
+                  <mat-label>Enter a date range</mat-label>
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input (dateChange)="onDate($event)" matStartDate placeholder="Start date">
+                    <input matEndDate placeholder="End date">
+                  </mat-date-range-input>
+                  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+
+            </div>
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                <mat-form-field fxFlex="100">
+                    <mat-label>Metodo de pago</mat-label>
+                      <mat-select
+                        formControlName="metodoPago"
+                        [(ngModel)]="selectedValueMet"
+                        required
+                        name="metodoPago">
+
+                        <mat-option
+                          *ngFor="let metodoPago of metodoPagos"
+                          [value]="metodoPago.value">
+                            {{metodoPago.viewValue}}
+                        </mat-option>
+
+                      </mat-select>
+                </mat-form-field>
+
+            </div>
+
+            <div class="spacer">
+                <button mat-raised-button color="primary"
+                    (click)="save()">
+                    <mat-icon>save</mat-icon>
+                    Guardar
+                </button>
+
+                <!-- <button *ngIf="plan.id"
+                    mat-raised-button
+                    color="warn"
+                    (click)="remove()">
+                    <mat-icon>remove</mat-icon>
+                    Borrar
+                </button> -->
+            </div>
+
+        </div>
+    </form>
+
+
+</div>

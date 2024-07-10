@@ -1,0 +1,73 @@
+<h1>Nuevo Plan <small>--</small></h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+     <form [formGroup]="miFormulario" autocomplete="off" (ngSubmit)="save()">
+        <div fxFlex="90" fxLayout="column">
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                <mat-form-field fxFlex="100">
+                    <mat-label>Nombre</mat-label>
+                        <input matInput
+                            type="text"
+                            formControlName="nombre"
+                            required>
+                            <mat-error>El nombre es muy corto</mat-error>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="100" fxLayout.xs="column">
+                    <mat-label>Precio</mat-label>
+                    <input matInput
+                            type="number"
+                            formControlName="precio"
+                            required>
+                            <mat-error>Ingresar precio</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutGap="20px">
+                <mat-form-field fxFlex="100">
+                    <mat-label>Estado</mat-label>
+                      <mat-select
+                        formControlName="estado"
+                        required
+                        name="estado">
+
+                        <mat-option
+                          *ngFor="let estado of estados"
+                          [value]="estado.value">
+                            {{estado.viewValue}}
+                        </mat-option>
+
+                      </mat-select>
+                </mat-form-field>
+
+            </div>
+
+            <div class="spacer">
+                <button mat-raised-button color="primary"
+                    (click)="save()">
+                    <mat-icon>save</mat-icon>
+                    Guardar
+                </button>
+
+                <button *ngIf="plan.id"
+                    mat-raised-button
+                    color="warn"
+                    (click)="remove()">
+                    <mat-icon>remove</mat-icon>
+                    Borrar
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+
+</div>

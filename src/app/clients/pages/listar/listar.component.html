@@ -1,0 +1,14 @@
+<h1>Clientes</h1>
+<mat-divider></mat-divider>
+<br>
+<button mat-raised-button color="primary" style="margin-left:20px"
+(click)="addClient()">Nuevo</button>
+
+<app-table
+  *ngIf="clientesList && clientesList.length > 0"
+  [columns] = "listCliente"
+  [data] = "clientesList"
+  [displayedColumns] = "displayedColumns"
+  (passIdEvent)="editClient($event)"
+  (deleteIdEvent)="deleteClient($event)">
+</app-table>

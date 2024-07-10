@@ -19,7 +19,7 @@ export class AuthService {
     return { ...this._auth }
   }
 
-  verficiaAutenticacion(): Observable<boolean> {
+  verficaAutenticacion(): Observable<boolean> {
 
     if ( !localStorage.getItem('token') ) {
       return of( false );

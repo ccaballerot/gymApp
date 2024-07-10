@@ -1,0 +1,13 @@
+<h1>Planes</h1>
+<mat-divider></mat-divider>
+<br>
+<button mat-raised-button color="primary" style="margin-left:20px"
+        (click)="addPlan()">Nuevo</button>
+<app-table
+  *ngIf="plansList && plansList.length > 0"
+  [columns] = "listPlan"
+  [data] = "plansList"
+  [displayedColumns] = "displayedColumns"
+  (passIdEvent)="editPlan($event)"
+  (deleteIdEvent)="deletePlan($event)">
+</app-table>
